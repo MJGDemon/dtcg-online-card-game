@@ -12,8 +12,9 @@ interface GameState {
 
   // 游戏内状态
   isMyTurn: boolean;
+  globalEffect: any[];
   memoryValue: number;
-  stage: "activeStage" | "spawnStage" | "mainStage" | "endStage";
+  stage: "turnStart" | "activeStage" | "spawnStage" | "mainStage" | "endStage";
   myDeck: Card[];
   opponentDeck: Card[];
   myEggDeck: Card[];
@@ -24,6 +25,7 @@ interface GameState {
 
 const gameStore = defineStore("game", () => {
   const gameState = reactive<GameState>({
+    globalEffect: [],
     isMyTurn: false,
     memoryValue: 0,
     stage: "activeStage",
