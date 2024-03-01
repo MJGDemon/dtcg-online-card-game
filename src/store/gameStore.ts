@@ -1,6 +1,7 @@
 import { defineStore } from "pinia";
 import { reactive } from "vue";
 import { Card } from "@/types/card";
+import { Observer } from "@/types/Observer";
 
 interface GameState {
   myInfo: {
@@ -21,6 +22,8 @@ interface GameState {
   opponentEggDeck: Card[];
   myHands: Card[];
   opponentHands: Card[];
+
+  obServerList: Observer[];
 }
 
 const gameStore = defineStore("game", () => {
@@ -41,6 +44,8 @@ const gameStore = defineStore("game", () => {
     opponentEggDeck: [],
     myHands: [],
     opponentHands: [],
+
+    obServerList: [],
   });
 
   const setIsMyTurn = (value: boolean) => {

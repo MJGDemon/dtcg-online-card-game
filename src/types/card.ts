@@ -10,10 +10,6 @@ interface CardInfo {
   type?: string[];
   mainEffect?: string;
   inheritedEffect?: string;
-  aceEffect?: string;
-  burstDigivolve?: string;
-  digiXros?: string;
-  dnaDigivolve?: string;
   securityEffect?: string;
   illustrator: string;
 }
@@ -24,6 +20,10 @@ export interface DigimonCard extends CardInfo {
   playCost: number;
   digivolveCost?: number;
   dp: number;
+  digiXros?: string;
+  aceEffect?: string;
+  burstDigivolve?: string;
+  dnaDigivolve?: string;
 }
 
 export interface OptionCard extends CardInfo {

@@ -22,6 +22,7 @@ export enum EventEnum {
   Digivolve = "Digivolve",
   BeforeDeletion = "BeforeDeletion",
   Deletion = "Deletion",
+  BeforeAttack = "BeforeAttack",
   Attack = "Attack",
 }
 
