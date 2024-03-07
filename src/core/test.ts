@@ -22,6 +22,18 @@ const mainTest = () => {
     type: EventEnum.TurnStart,
     origin: "system",
   });
+
+  notify({
+    isMyTurn: true,
+    type: EventEnum.ActiveStageStart,
+    origin: "system",
+  });
+
+  notify({
+    isMyTurn: true,
+    type: EventEnum.ActiveStageEnd,
+    origin: "system",
+  });
 };
 
 export default mainTest;

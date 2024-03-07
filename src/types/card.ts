@@ -1,3 +1,5 @@
+import { Digimon } from "./digimon";
+
 export type Card = DigimonCard | OptionCard | TamerCard | DigimonEggCard;
 
 interface CardInfo {
@@ -9,7 +11,7 @@ interface CardInfo {
   attribute?: string;
   type?: string[];
   mainEffect?: string;
-  inheritedEffect?: string;
+  inheritedEffect?: (thisDigimon: Digimon) => void;
   securityEffect?: string;
   illustrator: string;
 }
