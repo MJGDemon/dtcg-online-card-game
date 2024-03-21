@@ -44,7 +44,6 @@ const gameStore = defineStore("game", () => {
     opponentEggDeck: [],
     myHands: [],
     opponentHands: [],
-
     obServerList: [],
   });
 
@@ -67,11 +66,16 @@ const gameStore = defineStore("game", () => {
     }
   };
 
+  const pass = () => {
+    gameState.memoryValue = -3;
+  };
+
   return {
     gameState,
     setIsMyTurn,
     setMemoryValue,
     drawCard,
+    pass,
   };
 });
 

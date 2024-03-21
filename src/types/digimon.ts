@@ -7,4 +7,5 @@ export interface Digimon extends Observer {
   playCost: () => number | number;
   digivolveCost: () => number | number;
   digiOrigin?: DigimonCard[] | DigimonEggCard[];
+  buffs: any[];
 }

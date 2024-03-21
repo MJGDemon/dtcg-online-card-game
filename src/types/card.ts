@@ -2,14 +2,22 @@ import { Digimon } from "./digimon";
 
 export type Card = DigimonCard | OptionCard | TamerCard | DigimonEggCard;
 
+export enum CardTypeEnum {
+  digimon = "digimon",
+  tamer = "tamer",
+  option = "option",
+  digimonEgg = "digimonEgg",
+}
+
 interface CardInfo {
   id: string;
-  cardType: "digimon" | "tamer" | "option" | "digimonEgg";
+  cardType: CardTypeEnum;
   name: string;
   imgUrl: string;
   color: string[];
   attribute?: string;
   type?: string[];
+  Attribute?: string[];
   mainEffect?: string;
   inheritedEffect?: (thisDigimon: Digimon) => void;
   securityEffect?: string;

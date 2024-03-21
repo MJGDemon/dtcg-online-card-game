@@ -13,6 +13,7 @@ const mainTest = () => {
     update: (event) => {
       console.log(event);
     },
+    buffs: [],
   };
 
   subscribe(testDigimon);
